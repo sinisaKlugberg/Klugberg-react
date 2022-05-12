@@ -1,4 +1,4 @@
-# Moonex - Portfolio & Agency React Template
+# Klugberg React Theme
 
 ## Description
 
