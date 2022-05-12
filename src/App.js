@@ -76,9 +76,7 @@ const App = () => {
         })}
         <Switch>
           <Route path="/:slug" render={() => <WorksShowcase />} />
-        </Switch>
-        <Switch>
-          <Route path="/" render={() => <Redirect to="/home-agency" />} />
+          <Route path="" render={() => <Redirect to="/home-agency" />} />
         </Switch>
         </Fragment>
       </Router>
