@@ -77,9 +77,9 @@ const App = () => {
         <Switch>
           <Route path="/:slug" render={() => <WorksShowcase />} />
         </Switch>
-        {/*<Switch>
+        <Switch>
           <Route path="/" render={() => <Redirect to="/home-agency" />} />
-      </Switch>*/}
+        </Switch>
         </Fragment>
       </Router>
 
