@@ -16,12 +16,12 @@ import Team from "../../components/team/Team";
 import TestimonialTwo from "../../components/testimonial/TestimonialTwo";
 
 const HomeAgency = (props) => {
-  console.log(props.homeAgency);
+  //console.log(props.homeAgency);
 
   return (
     <div className="ptf-site-wrapper animsition ptf-is--home-agency">
       <Helmet>
-        <title>Moonex - Home Agency</title>
+        <title>Klugberg</title>
       </Helmet>
       {/* End Page SEO Content */}
 
@@ -207,7 +207,7 @@ const HomeAgency = (props) => {
                   data-aos="fade"
                   data-aos-delay="0"
                 >
-                  <h2 className="h1 large-heading has-accent-1">{props.homeAgency.sto_radimo_section_title}</h2>
+                  <h2 className="h1 large-heading has-accent-1">{props.homeAgency.what_we_do_title}</h2>
                 </div>
                 {/* <!--Spacer--> */}
                 <div

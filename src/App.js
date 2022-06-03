@@ -12,6 +12,7 @@ import { Helmet } from "react-helmet";
 import { BrowserRouter as Router, Route, Switch, Redirect } from "react-router-dom";
 import Page from "./views/Page";
 import WorksShowcase from "./views/inner-pages/portfolio/WorksShowcase";
+import HomeAgency from "./views/all-home-version/HomeAgency";
 
 const App = () => {
   const [data, setData] = useState([]);
@@ -20,13 +21,14 @@ const App = () => {
       fetch(`http://www.klugberg.local/wp-json/wp/v2/pages`)
       .then((res) => res.json())
       .then((data) => {
-          //console.log(data);
+        //console.log(data);
           setData(data);
       })
       .catch((err) => {
           console.log(err);
       });
   }, []);
+
 
   useEffect(() => {
     AOS.init({
@@ -36,7 +38,7 @@ const App = () => {
   return (
     <>
       <Helmet>
-        <title>Moonex - Portfolio & Agency React Template</title>
+        <title>Klugberg</title>
         <meta name="description" content="Portfolio & Agency React Template" />
         <meta
           name="keywords"
@@ -45,39 +47,25 @@ const App = () => {
       </Helmet>
       {/* End React Helmet for SEO */}
 
-      {/*<AnimatedCursor
-        innerSize={8}
-        outerSize={44}
-        color="220, 53, 69"
-        outerAlpha={0.3}
-        innerScale={0.7}
-        outerScale={1.2}
-  />*/}
-      {/* End Animated Cursor */}
-
       <ScrollToTop />
       {/* End Scroll To Top */}
 
-
       <Router>
       <Fragment>
-        {/*<ScrollTopBehaviour />*/}
-        {data.map((page, index) => {
-          return(
-            <Switch key={index}>
-              <Route 
-                exact 
+      
+          {data.map(page => {
+            return(
+              <Route  
                 key={page.id} 
                 path={`/${page.slug}`} 
                 render={() => <Page {...page} page={page} />} 
               />
-            </Switch>
-          );
-        })}
-        <Switch>
-          <Route path="/:slug" render={() => <WorksShowcase />} />
-          <Route path="" render={() => <Redirect to="/home-agency" />} />
-        </Switch>
+            );
+          })}
+            <Route path="/:slug" render={() => <WorksShowcase />} />
+            {/*<Route path="" render={() => <Redirect to="/home-agency" />} />*/}
+                {/*<Route path="/" render={() => <HomeAgency />} />*/}
+        
         </Fragment>
       </Router>
 

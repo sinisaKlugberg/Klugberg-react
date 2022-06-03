@@ -16,15 +16,17 @@ const DropdownMenu = () => {
         });
     }, []);
   return (
-    <ul className="sf-menu">
-      {data.items?.map((item, i) => (
-        <li className={`menu-item-has-children`} key={i}>
-          <Link to={item.object_slug}>
-            <span>{item.title}</span>
-          </Link>
-        </li>
-      ))}
-    </ul>
+    <>
+      <ul className="sf-menu">
+        {data.items?.map((item, i) => (
+          <li className={`menu-item-has-children`} key={i}>
+            <Link to={item.object_slug}>
+              <span>{item.title}</span>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </>
   );
 };
 

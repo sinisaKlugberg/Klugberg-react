@@ -34,6 +34,8 @@ export default class Page extends React.Component {
                 return <WorksGrid port={this.props} key={this.props.id} />
             case "contact":
                 return <Contact kontakt={this.props.acf} key={this.props.id} />
+            case " ":
+                return <HomeAgency homeAgency={this.props.acf} key={this.props.id}/>
             default:
                 return null
         }

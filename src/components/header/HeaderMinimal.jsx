@@ -39,7 +39,7 @@ const HeaderMinimal = () => {
               {/* <!--Language switcher--> */}
               <ul className="ptf-language-switcher">
                 <li>
-                  <a href="#">English</a>
+                  {/*<a href="#">English</a>*/}                
                 </li>
               </ul>
             </div>
@@ -54,11 +54,11 @@ const HeaderMinimal = () => {
       >
         <div className="ptf-offcanvas-menu__header">
           <div className="ptf-language-switcher">
-            <a className="is-active" href="#">
+            {/*<a className="is-active" href="#">
               Eng
             </a>
             <a href="#">Fra</a>
-            <a href="#">Ger</a>
+      <a href="#">Ger</a>*/}
           </div>
           <span
             className="ptf-offcanvas-menu-icon js-offcanvas-menu-toggle"

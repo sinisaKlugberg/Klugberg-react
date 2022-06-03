@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 //import { Link } from "react-router-dom";
 
 import HeaderLogo from "./HeaderLogo";
@@ -8,19 +8,6 @@ import DropdownMenu from "./menu/DropdownMenu";
 import MobileMenu from "./menu/MobileMenu";
 
 const HeaderAgency = () => {
-  const [data, setData] = useState([]);
-
-  useEffect(() => {
-      fetch(`http://www.klugberg.local/wp-json/wp/v2/media/251`)
-      .then((res) => res.json())
-      .then((data) => {
-          console.log(data);
-          setData(data);
-      })
-      .catch((err) => {
-          console.log(err);
-      });
-  }, []);
 
   const [click, setClick] = useState(false);
   const handleClick = () => setClick(!click);
@@ -101,11 +88,7 @@ const HeaderAgency = () => {
       >
         <div className="ptf-offcanvas-menu__header">
           <div className="ptf-language-switcher">
-            <a className="is-active" href="#">
-              Eng
-            </a>
-            <a href="#">Fra</a>
-            <a href="#">Ger</a>
+            
           </div>
           <span
             className="ptf-offcanvas-menu-icon js-offcanvas-menu-toggle"

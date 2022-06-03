@@ -8,7 +8,7 @@ const HeaderLogo = () => {
         fetch(`http://www.klugberg.local/wp-json/wp/v2/media/251`)
         .then((res) => res.json())
         .then((data) => {
-            console.log(data);
+            //console.log(data);
             setData(data);
         })
         .catch((err) => {
